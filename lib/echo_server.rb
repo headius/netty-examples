@@ -31,7 +31,7 @@ class EchoServer
 
   class EchoServerHandler < SimpleChannelUpstreamHandler
     # override messageReceived
-
+    def messageReceived(ctx, e)
       e.channel.write(e.message)
     end
   end
